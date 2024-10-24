@@ -1,0 +1,12 @@
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\bin\Debug\Golay-Code.exe.config
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\bin\Debug\Golay-Code.exe
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\bin\Debug\Golay-Code.pdb
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.csproj.AssemblyReference.cache
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.Properties.Resources.resources
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.csproj.GenerateResource.cache
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.csproj.CoreCompileInputs.cache
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.exe
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.pdb
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.Welcome_Page.resources
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.Page1.resources
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.Page2.resources
