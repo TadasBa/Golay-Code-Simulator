@@ -1,6 +1,6 @@
 ﻿namespace Golay_Code
 {
-    partial class Welcome_Page
+    partial class WelcomePage
     {
         /// <summary>
         /// Required designer variable.

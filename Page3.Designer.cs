@@ -162,6 +162,7 @@
             this.ButtonHome.TabIndex = 12;
             this.ButtonHome.Text = "Home";
             this.ButtonHome.UseVisualStyleBackColor = true;
+            this.ButtonHome.Click += new System.EventHandler(this.ButtonHome_Click);
             // 
             // label6
             // 

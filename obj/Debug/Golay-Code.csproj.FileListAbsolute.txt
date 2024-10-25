@@ -7,7 +7,7 @@ C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.csproj.
 C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.csproj.CoreCompileInputs.cache
 C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.exe
 C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay-Code.pdb
-C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.Welcome_Page.resources
 C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.Page1.resources
 C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.Page2.resources
 C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.Page3.resources
+C:\Univerity\VII-Semestras\Coding-theory\Golay-Code\obj\Debug\Golay_Code.WelcomePage.resources

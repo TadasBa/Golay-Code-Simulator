@@ -18,6 +18,7 @@ namespace Golay_Code
         public Page1()
         {
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(OnFormClosed);
         }
 
         private void Encode_Click(object sender, EventArgs e)
@@ -73,6 +74,11 @@ namespace Golay_Code
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
+        }
+
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

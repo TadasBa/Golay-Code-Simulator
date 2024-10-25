@@ -31,6 +31,8 @@ namespace Golay_Code
 
             LabelErrorPositions.Text = errorPositionsString;
             LabelErrors.Text = numberOfErrors.ToString();
+
+            this.FormClosed += new FormClosedEventHandler(OnFormClosed);
         }
 
         private static int[] CheckErrorPossitions(string sentVector, string receivedVector) 
@@ -59,6 +61,18 @@ namespace Golay_Code
 
             LabelErrorPositions.Text = errorPositionsString;
             LabelErrors.Text = numberOfErrors.ToString();
+        }
+
+        private void ButtonHome_Click(object sender, EventArgs e)
+        {
+            WelcomePage welcomePage = new WelcomePage();
+            welcomePage.Show();
+            this.Hide();
+        }
+
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

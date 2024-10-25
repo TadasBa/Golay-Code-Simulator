@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Golay_Code
 {
-    public partial class Welcome_Page : Form
+    public partial class WelcomePage : Form
     {
-        public Welcome_Page()
+        public WelcomePage()
         {
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(OnFormClosed);
         }
 
         private void NextButton_Click(object sender, EventArgs e)
@@ -24,6 +25,11 @@ namespace Golay_Code
             page1.Show();
 
             this.Hide();
+        }
+
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

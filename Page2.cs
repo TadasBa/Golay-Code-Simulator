@@ -25,6 +25,8 @@ namespace Golay_Code
             string encodedVectorString = string.Join(" ", encodedVector);
 
             LabelEncodedData.Text = encodedVectorString;
+
+            this.FormClosed += new FormClosedEventHandler(OnFormClosed);
         }
 
         private void ButtonSend_Click(object sender, EventArgs e)
@@ -42,6 +44,11 @@ namespace Golay_Code
             Page3 page3 = new Page3(noisyVector, encodedVector);
             page3.Show();
             this.Hide();
+        }
+
+        private void OnFormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

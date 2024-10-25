@@ -19,7 +19,7 @@ namespace Golay_Code
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Welcome_Page());
+            Application.Run(new WelcomePage());
         }
 
         // Dll import to fix low resolution issues
