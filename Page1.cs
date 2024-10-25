@@ -12,6 +12,9 @@ namespace Golay_Code
 {
     public partial class Page1 : Form
     {
+
+        public int[] inputVector;
+
         public Page1()
         {
             InitializeComponent();
@@ -51,6 +54,8 @@ namespace Golay_Code
                     MessageBox.Show("The input vector must be exactly 12 elements long.");
                     return;
                 }
+
+                inputVector = vector;
 
                 // Call the MultiplyVectorByMatrix function
                 int[] result = Program.MultiplyVectorByMatrix(vector, matrix);

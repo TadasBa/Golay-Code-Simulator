@@ -33,13 +33,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TextBoxProbability = new System.Windows.Forms.TextBox();
             this.LabelEncodedData = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.LabelReceived = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ButtonSend
             // 
-            this.ButtonSend.Location = new System.Drawing.Point(43, 332);
+            this.ButtonSend.Location = new System.Drawing.Point(505, 282);
             this.ButtonSend.Name = "ButtonSend";
             this.ButtonSend.Size = new System.Drawing.Size(143, 43);
             this.ButtonSend.TabIndex = 11;
@@ -53,15 +51,15 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(38, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 25);
+            this.label1.Size = new System.Drawing.Size(245, 25);
             this.label1.TabIndex = 9;
-            this.label1.Text = "After encoding your data is as follows";
+            this.label1.Text = "Vector after encoding:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 247);
+            this.label2.Location = new System.Drawing.Point(38, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(263, 25);
             this.label2.TabIndex = 12;
@@ -69,7 +67,7 @@
             // 
             // TextBoxProbability
             // 
-            this.TextBoxProbability.Location = new System.Drawing.Point(337, 247);
+            this.TextBoxProbability.Location = new System.Drawing.Point(332, 193);
             this.TextBoxProbability.Name = "TextBoxProbability";
             this.TextBoxProbability.Size = new System.Drawing.Size(100, 31);
             this.TextBoxProbability.TabIndex = 13;
@@ -82,31 +80,11 @@
             this.LabelEncodedData.Size = new System.Drawing.Size(0, 25);
             this.LabelEncodedData.TabIndex = 14;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(43, 411);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(360, 25);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Vector received from the channel";
-            // 
-            // LabelReceived
-            // 
-            this.LabelReceived.AutoSize = true;
-            this.LabelReceived.Location = new System.Drawing.Point(43, 460);
-            this.LabelReceived.Name = "LabelReceived";
-            this.LabelReceived.Size = new System.Drawing.Size(0, 25);
-            this.LabelReceived.TabIndex = 16;
-            // 
             // Page2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 519);
-            this.Controls.Add(this.LabelReceived);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(663, 339);
             this.Controls.Add(this.LabelEncodedData);
             this.Controls.Add(this.TextBoxProbability);
             this.Controls.Add(this.label2);
@@ -126,7 +104,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TextBoxProbability;
         private System.Windows.Forms.Label LabelEncodedData;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LabelReceived;
     }
 }

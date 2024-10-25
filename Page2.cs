@@ -31,14 +31,17 @@ namespace Golay_Code
         {
             string probability = TextBoxProbability.Text;
 
+            probability = probability.Replace(",", ".");
+
             double errorProbability = Convert.ToDouble(probability);
 
             // Simulate noisy channel
             int[] noisyVector = Program.SimulateNoisyChannel(encodedVector, errorProbability);
 
-            string noisyVectorString = string.Join(" ", noisyVector);
-
-            LabelReceived.Text = noisyVectorString;
+            // Create an instance of Page3
+            Page3 page3 = new Page3(noisyVector, encodedVector);
+            page3.Show();
+            this.Hide();
         }
     }
 }
