@@ -71,6 +71,7 @@
             this.ButtonEdit.TabIndex = 2;
             this.ButtonEdit.Text = "Edit";
             this.ButtonEdit.UseVisualStyleBackColor = true;
+            this.ButtonEdit.Click += new System.EventHandler(this.ButtonEdit_Click);
             // 
             // label2
             // 

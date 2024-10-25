@@ -46,5 +46,19 @@ namespace Golay_Code
             }
             return mismatchPositions.ToArray();
         }
+
+        private void ButtonEdit_Click(object sender, EventArgs e)
+        {
+            string sentVector = LabelSent.Text;
+            string receveidVector = TextBoxReceived.Text;
+
+            int[] errorPositions = CheckErrorPossitions(sentVector, receveidVector);
+
+            int numberOfErrors = errorPositions.Length;
+            string errorPositionsString = string.Join(", ", errorPositions);
+
+            LabelErrorPositions.Text = errorPositionsString;
+            LabelErrors.Text = numberOfErrors.ToString();
+        }
     }
 }
