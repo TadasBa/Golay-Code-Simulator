@@ -8,6 +8,10 @@ namespace Golay_Code
 {
     internal static class Program
     {
+
+        // Initialize Random only once for precision
+        private static readonly Random random = new Random();
+
         static void Main()
         {
             if (Environment.OSVersion.Version.Major >= 6)
@@ -48,7 +52,6 @@ namespace Golay_Code
 
         public static int[] SimulateNoisyChannel(int[] vector, double errorProbability)
         {
-            Random random = new Random();
             int[] noisyVector = new int[vector.Length];
 
             for (int i = 0; i < vector.Length; i++)
@@ -56,16 +59,14 @@ namespace Golay_Code
                 // Copy the original vector
                 noisyVector[i] = vector[i];
 
-                // Generate a random number to decide if the bit should flip
-                double rand = random.NextDouble();  // Random number between 0 and 1
+                // Generate a random number to decide if the bit/symbol should be distorted
+                double rand = random.NextDouble();
 
                 if (rand <= errorProbability)
                 {
-                    // Flip the bit if random number is less than or equal to the error probability
-                    noisyVector[i] = 1 - vector[i];  // Flip: 0 becomes 1, 1 becomes 0
+                    noisyVector[i] = 1 - vector[i];
                 }
             }
-
             return noisyVector;
         }
     }
