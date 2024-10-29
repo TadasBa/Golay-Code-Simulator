@@ -14,13 +14,15 @@ namespace Golay_Code
     {
 
         private int[] encodedVector;
+        int[] inputVector;
 
-        public Page2(int[] vector) 
+        public Page2(int[] vector, int[] input) 
         {
             InitializeComponent();
 
             // saving received encoded vector value in class level variable 'encodedVector' for easier access
             encodedVector = vector;
+            inputVector = input;
 
             string encodedVectorString = string.Join(" ", encodedVector);
 
@@ -41,7 +43,7 @@ namespace Golay_Code
             int[] noisyVector = Program.SimulateNoisyChannel(encodedVector, errorProbability);
 
             // Create an instance of Page3
-            Page3 page3 = new Page3(noisyVector, encodedVector);
+            Page3 page3 = new Page3(noisyVector, encodedVector, inputVector);
             page3.Show();
             this.Hide();
         }

@@ -99,6 +99,7 @@
             this.ButtonDecode.TabIndex = 5;
             this.ButtonDecode.Text = "Decode";
             this.ButtonDecode.UseVisualStyleBackColor = true;
+            this.ButtonDecode.Click += new System.EventHandler(this.ButtonDecode_Click);
             // 
             // label4
             // 

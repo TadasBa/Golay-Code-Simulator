@@ -26,21 +26,16 @@ namespace Golay_Code
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
 
-        // Function to multiply a vector by a 12x23 matrix in GF(2) (binary field)
-        public static int[] MultiplyVectorByMatrix(int[] vector, int[,] matrix)
+        // Function to multiply a vector by a matrix in GF(2) (binary field)
+        public static int[] MultiplyVectorByMatrix(int[] vector, int[,] matrix, int matrixRows, int matrixCollumns)
         {
-            if (vector.Length != 12 || matrix.GetLength(0) != 12 || matrix.GetLength(1) != 23)
-            {
-                throw new ArgumentException("Vector length must be 12 and matrix dimensions must be 12x23.");
-            }
-
-            int[] result = new int[23]; // Resultant vector of length 23
+            int[] result = new int[matrixCollumns];
 
             // Matrix-vector multiplication in GF(2)
-            for (int j = 0; j < 23; j++) // Iterating over matrix columns
+            for (int j = 0; j < matrixCollumns; j++) // Iterating over matrix columns
             {
                 result[j] = 0; // Initialize result at each position to 0
-                for (int i = 0; i < 12; i++) // Iterating over matrix rows and vector elements
+                for (int i = 0; i < matrixRows; i++) // Iterating over matrix rows and vector elements
                 {
                     // Multiply and accumulate, then take mod 2 (binary addition)
                     result[j] = (result[j] + matrix[i, j] * vector[i]) % 2;

@@ -59,10 +59,10 @@ namespace Golay_Code
                 inputVector = vector;
 
                 // Call the MultiplyVectorByMatrix function
-                int[] result = Program.MultiplyVectorByMatrix(vector, matrix);
+                int[] result = Program.MultiplyVectorByMatrix(vector, matrix, matrix.GetLength(0), matrix.GetLength(1));
 
                 // Create an instance of Form2
-                Page2 page2 = new Page2(result);
+                Page2 page2 = new Page2(result, inputVector);
                 page2.Show();
                 this.Hide();
             }
