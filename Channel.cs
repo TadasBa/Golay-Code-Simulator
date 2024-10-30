@@ -8,7 +8,6 @@ namespace Golay_Code
 {
     internal static class Channel
     {
-        // Initialize Random only once for precision
         private static readonly Random random = new Random();
 
         public static int[] SimulateNoisyChannel(int[] vector, double errorProbability)
@@ -17,10 +16,7 @@ namespace Golay_Code
 
             for (int i = 0; i < vector.Length; i++)
             {
-                // Copy the original vector
                 noisyVector[i] = vector[i];
-
-                // Generate a random number to decide if the bit/symbol should be distorted
                 double rand = random.NextDouble();
 
                 if (rand <= errorProbability)
@@ -31,7 +27,6 @@ namespace Golay_Code
             return noisyVector;
         }
 
-        // Parse and validate probability input
         public static double ParseProbability(string probabilityText)
         {
             probabilityText = probabilityText.Replace(",", ".");

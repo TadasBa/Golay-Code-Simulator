@@ -27,9 +27,8 @@ namespace Golay_Code
 
                 int[] encodedResult = Encoder.Encode(inputVector, Matrices.GetMatrixG());
 
-                // Pass the encoded result to Page2
-                ChannelPage page2 = new ChannelPage(encodedResult, inputVector);
-                page2.Show();
+                ChannelPage channelPage = new ChannelPage(encodedResult, inputVector);
+                channelPage.Show();
                 this.Hide();
             }
             catch (FormatException)
@@ -45,11 +44,6 @@ namespace Golay_Code
         private void OnFormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
-        }
-
-        private void Page1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

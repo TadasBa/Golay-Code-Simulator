@@ -72,7 +72,6 @@
             this.Controls.Add(this.ButtonEncode);
             this.Name = "Page1";
             this.Text = "Gollay Code Simulator";
-            this.Load += new System.EventHandler(this.Page1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

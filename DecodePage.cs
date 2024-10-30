@@ -48,8 +48,8 @@ namespace Golay_Code
 
         private void ButtonHome_Click(object sender, EventArgs e)
         {
-            HomePage welcomePage = new HomePage();
-            welcomePage.Show();
+            HomePage homePage = new HomePage();
+            homePage.Show();
             this.Hide();
         }
 

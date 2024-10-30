@@ -15,7 +15,6 @@ namespace Golay_Code
 
             encodedVector = vector;
             inputVector = input;
-
             LabelEncodedData.Text = string.Join(" ", encodedVector);
 
             this.FormClosed += new FormClosedEventHandler(OnFormClosed);
@@ -26,13 +25,11 @@ namespace Golay_Code
             try
             {
                 double errorProbability = Channel.ParseProbability(TextBoxProbability.Text);
-
-                // Simulate noisy channel
                 int[] noisyVector = Channel.SimulateNoisyChannel(encodedVector, errorProbability);
 
                 // Show the results on Page3
-                DecodePage page3 = new DecodePage(noisyVector, encodedVector, inputVector);
-                page3.Show();
+                DecodePage decodePage = new DecodePage(noisyVector, encodedVector, inputVector);
+                decodePage.Show();
                 this.Hide();
             }
             catch (FormatException)

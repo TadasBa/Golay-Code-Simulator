@@ -8,7 +8,6 @@ namespace Golay_Code
 {
     internal static class Matrices
     {
-        // Predefined matrix 12x23 for encoding
         public static int[,] GetMatrixG()
         {
             return new int[,]

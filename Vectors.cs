@@ -8,7 +8,6 @@ namespace Golay_Code
 {
     internal static class Vectors
     {
-        // Helper function to add two binary vectors mod 2
         public static int[] AddBinaryVectorsMod2(int[] vectorA, int[] vectorB)
         {
             int[] result = new int[vectorA.Length];
@@ -30,12 +29,21 @@ namespace Golay_Code
             return count;
         }
 
-        // Parse input vector from string
         public static int[] ParseInputVector(string inputText)
         {
-            string[] input = inputText.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
-            return Array.ConvertAll(input, int.Parse);
+            // Remove all spaces and commas from the input to handle continuous strings
+            string sanitizedInput = inputText.Replace(" ", "").Replace(",", "");
+
+            // Ensure the input is of length 12 and only contains binary characters (0 or 1)
+            if (sanitizedInput.Length != 12 || !sanitizedInput.All(c => c == '0' || c == '1'))
+            {
+                throw new ArgumentException("Input must be a 12-character binary vector.");
+            }
+
+            // Convert the sanitized string to an integer array
+            return sanitizedInput.Select(c => int.Parse(c.ToString())).ToArray();
         }
+
 
         public static int[] MakeVectorHaveOddNumberOfOnes(int[] receivedVector)
         {
