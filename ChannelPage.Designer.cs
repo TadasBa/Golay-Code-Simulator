@@ -1,6 +1,6 @@
 ﻿namespace Golay_Code
 {
-    partial class Page2
+    partial class ChannelPage
     {
         /// <summary>
         /// Required designer variable.

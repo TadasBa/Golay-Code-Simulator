@@ -10,20 +10,17 @@ using System.Windows.Forms;
 
 namespace Golay_Code
 {
-    public partial class WelcomePage : Form
+    public partial class ImagePage : Form
     {
-        public WelcomePage()
+        public ImagePage()
         {
             InitializeComponent();
-            this.FormClosed += new FormClosedEventHandler(OnFormClosed);
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
+        private void HomeButton_Click(object sender, EventArgs e)
         {
-            Page1 page1 = new Page1();
-
-            page1.Show();
-
+            HomePage welcomePage = new HomePage();
+            welcomePage.Show();
             this.Hide();
         }
 

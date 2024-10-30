@@ -1,6 +1,6 @@
 ﻿namespace Golay_Code
 {
-    partial class Page3
+    partial class DecodePage
     {
         /// <summary>
         /// Required designer variable.
@@ -183,7 +183,7 @@
             this.LabelSent.Size = new System.Drawing.Size(0, 25);
             this.LabelSent.TabIndex = 14;
             // 
-            // Page3
+            // DecodePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -203,8 +203,8 @@
             this.Controls.Add(this.ButtonEdit);
             this.Controls.Add(this.TextBoxReceived);
             this.Controls.Add(this.label1);
-            this.Name = "Page3";
-            this.Text = "Page3";
+            this.Name = "DecodePage";
+            this.Text = "Gollay Code Simulator";
             this.ResumeLayout(false);
             this.PerformLayout();
 

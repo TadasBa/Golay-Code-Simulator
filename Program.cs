@@ -8,10 +8,6 @@ namespace Golay_Code
 {
     internal static class Program
     {
-
-        // Initialize Random only once for precision
-        private static readonly Random random = new Random();
-
         static void Main()
         {
             if (Environment.OSVersion.Version.Major >= 6)
@@ -19,50 +15,11 @@ namespace Golay_Code
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new WelcomePage());
+            Application.Run(new HomePage());
         }
 
         // Dll import to fix low resolution issues
         [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern bool SetProcessDPIAware();
-
-        // Function to multiply a vector by a matrix in GF(2) (binary field)
-        public static int[] MultiplyVectorByMatrix(int[] vector, int[,] matrix, int matrixRows, int matrixCollumns)
-        {
-            int[] result = new int[matrixCollumns];
-
-            // Matrix-vector multiplication in GF(2)
-            for (int j = 0; j < matrixCollumns; j++) // Iterating over matrix columns
-            {
-                result[j] = 0; // Initialize result at each position to 0
-                for (int i = 0; i < matrixRows; i++) // Iterating over matrix rows and vector elements
-                {
-                    // Multiply and accumulate, then take mod 2 (binary addition)
-                    result[j] = (result[j] + matrix[i, j] * vector[i]) % 2;
-                }
-            }
-
-            return result;
-        }
-
-        public static int[] SimulateNoisyChannel(int[] vector, double errorProbability)
-        {
-            int[] noisyVector = new int[vector.Length];
-
-            for (int i = 0; i < vector.Length; i++)
-            {
-                // Copy the original vector
-                noisyVector[i] = vector[i];
-
-                // Generate a random number to decide if the bit/symbol should be distorted
-                double rand = random.NextDouble();
-
-                if (rand <= errorProbability)
-                {
-                    noisyVector[i] = 1 - vector[i];
-                }
-            }
-            return noisyVector;
-        }
+        private static extern bool SetProcessDPIAware();       
     }
 }

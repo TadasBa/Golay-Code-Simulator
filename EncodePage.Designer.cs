@@ -1,6 +1,6 @@
 ﻿namespace Golay_Code
 {
-    partial class Page1
+    partial class EncodePage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Encode = new System.Windows.Forms.Button();
+            this.ButtonEncode = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.InputVector = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Encode
+            // ButtonEncode
             // 
-            this.Encode.Location = new System.Drawing.Point(558, 173);
-            this.Encode.Name = "Encode";
-            this.Encode.Size = new System.Drawing.Size(143, 43);
-            this.Encode.TabIndex = 0;
-            this.Encode.Text = "Encode";
-            this.Encode.UseVisualStyleBackColor = true;
-            this.Encode.Click += new System.EventHandler(this.Encode_Click);
+            this.ButtonEncode.Location = new System.Drawing.Point(558, 173);
+            this.ButtonEncode.Name = "ButtonEncode";
+            this.ButtonEncode.Size = new System.Drawing.Size(143, 43);
+            this.ButtonEncode.TabIndex = 0;
+            this.ButtonEncode.Text = "Encode";
+            this.ButtonEncode.UseVisualStyleBackColor = true;
+            this.ButtonEncode.Click += new System.EventHandler(this.ButtonEncode_Click);
             // 
             // label3
             // 
@@ -61,7 +61,7 @@
             this.InputVector.Size = new System.Drawing.Size(348, 31);
             this.InputVector.TabIndex = 5;
             // 
-            // Form1
+            // Page1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,9 +69,10 @@
             this.ClientSize = new System.Drawing.Size(721, 235);
             this.Controls.Add(this.InputVector);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.Encode);
-            this.Name = "Gollay Code Simulator";
+            this.Controls.Add(this.ButtonEncode);
+            this.Name = "Page1";
             this.Text = "Gollay Code Simulator";
+            this.Load += new System.EventHandler(this.Page1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Encode;
+        private System.Windows.Forms.Button ButtonEncode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox InputVector;
     }
