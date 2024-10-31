@@ -8,6 +8,7 @@ namespace Golay_Code
 {
     internal static class Program
     {
+        [STAThread]
         static void Main()
         {
             if (Environment.OSVersion.Version.Major >= 6)
