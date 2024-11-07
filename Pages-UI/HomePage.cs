@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Golay_Code
@@ -20,7 +13,7 @@ namespace Golay_Code
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            if(ComboBoxInputType.Text == "Vector")
+            if (ComboBoxInputType.Text == "Vector")
             {
                 EncodePage encodePage = new EncodePage();
                 encodePage.Show();

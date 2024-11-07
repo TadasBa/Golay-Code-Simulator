@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -40,7 +37,7 @@ namespace Golay_Code
         }
 
         private void ButtonDecode_Click(object sender, EventArgs e)
-        {         
+        {
             int[] receivedVector = TextBoxReceived.Text.Split(' ').Select(int.Parse).ToArray();
             int[] decodedVector = Decoder.Decode(receivedVector, Matrices.GetMatrixH(), Matrices.GetMatrixB());
             LabelDecoded.Text = string.Join(" ", decodedVector);

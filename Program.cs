@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Golay_Code
@@ -21,6 +18,6 @@ namespace Golay_Code
 
         // Dll import to fix low resolution issues
         [System.Runtime.InteropServices.DllImport("user32.dll")]
-        private static extern bool SetProcessDPIAware();       
+        private static extern bool SetProcessDPIAware();
     }
 }
